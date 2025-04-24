@@ -10,7 +10,7 @@
 }
 
 * {
-    box-sizing: border-box;
+    box-sizing: border-box;                  
     margin: 0;
     padding: 0;
 }
@@ -24,7 +24,7 @@ body {
     flex-direction: column; /* กำหนดให้เป็นแนวตั้ง */
     justify-content: center; /* จัดให้อยู่กึ่งกลาง แกน Y */
     align-items: center;/* จัดให้อยู่กึ่งกลาง แกน x */
-    /* height: 110vh; กำหนดความสูงเป็นหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหน */
+    /* height: 110vh; กำหนดความสูงเป็นหนึ่งหนึ่งหนึ่งหนึ่งหนึ่ง */
 }
 h2 {
     font-family: 'Pattaya', sans-serif;
@@ -162,7 +162,7 @@ h4 {
     }
 
     .delete-btn:hover {
-        background-color: var(--secondary-color);
+        background-color: var(--secondary-color); /* เปลี่ยนสีเมื่อ hover */
     }
 
     .list li .delete-btn {
@@ -175,15 +175,15 @@ h4 {
         
     }
 
-    .list li:hover .delete-btn {
+    .list li:hover .delete-btn {    
         opacity: 1;
     }
 
     .list li:hover {
-        background-color: #f0f0f0;
+        background-color: #f0f0f0; 
     }
-    .list li:hover .delete-btn:hover {
-        background-color: #d32f2f;
+    .list li:hover .delete-btn:hover { /* เปลี่ยนสีเมื่อ hover */
+        background-color: #d32f2f; 
     }
     
 /* .container {
