@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pattaya&display=swap');
+
+:root {
+    --primary-color: #4CAF50; /* Green */
+    --secondary-color: #f44336;/* Red */
+    --background-color: #f0f0f0;/* Light Gray */
+    --text-color: #333; /* Dark Gray */
+    --font-family: 'Kanit', sans-serif;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    display: flex;
+    background-color: #f0f0f0de;
+    margin: 0;
+    padding: 0;
+    flex-direction: column; /* กำหนดให้เป็นแนวตั้ง */
+    justify-content: center; /* จัดให้อยู่กึ่งกลาง แกน Y */
+    align-items: center;/* จัดให้อยู่กึ่งกลาง แกน x */
+    /* height: 110vh; กำหนดความสูงเป็นหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหนึ่งหน */
+}
+h2 {
+    font-family: 'Pattaya', sans-serif;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+h1,h4,h5,h6 {
+    font-family: 'Pattaya', sans-serif;
+    color: #333;
+}
+
+h3 {
+    border-bottom: #bbb solid 1px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.income-expense-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+}
+
+.income-expense-container > div {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #fff;
+    /* box-shadow: var(--box-shadow); */
+    border-radius: 8px;
+}
+
+.income-expense-container>div:first-of-type{
+    border-right: 1px solid #ccc;
+}
+
+.money.plus {
+    color: green;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.money.plus::before {
+    content: '+';
+    color: green;
+}
+
+.money.minus {
+    color: red;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.money.minus::before {
+    content: '-';
+    color: red;
+}
+
+.list li.plus {
+    border-right: 5px solid green;
+    background-color: #e8f5e9;
+}
+
+.list li.minus {
+    border-right: 5px solid red;
+    background-color: #ffebee;
+}
+
+    input[type="text"],input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-shadow: var(--box-shadow);
+    }
+
+    .btn {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: var(--box-shadow);
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .list{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .list li {
+        padding: 10px;
+        margin: 5px 0;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: var(--box-shadow);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        color: #333;
+
+    }
+
+    .delete-btn {
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        box-shadow: var(--box-shadow);
+        transition: background-color 0.3s ease;
+        display: inline-block;
+        margin-right: 50px;
+    }
+
+    .delete-btn:hover {
+        background-color: var(--secondary-color);
+    }
+
+    .list li .delete-btn {
+        opacity: 0;
+        right: 0;
+        transition: right 0.3s ease;
+        /* position: absolute; */
+        /* transform: translateY(-50%); */
+        z-index: 1;
+        
+    }
+
+    .list li:hover .delete-btn {
+        opacity: 1;
+    }
+
+    .list li:hover {
+        background-color: #f0f0f0;
+    }
+    .list li:hover .delete-btn:hover {
+        background-color: #d32f2f;
+    }
+    
+/* .container {
+    max-width: 25000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
